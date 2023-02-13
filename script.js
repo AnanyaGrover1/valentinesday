@@ -5,23 +5,29 @@ $( document ).ready(function() {
     var btn_reset = $("#reset");
 
     envelope.click( function() {
-        open();
-    });
-    btn_open.click( function() {
-        open();
-    });
-    btn_reset.click( function() {
-        close();
+        open1();
     });
 
 
-    function open() {
+    function open1() {
         envelope.addClass("open")
            .removeClass("close");
     }
-    function close() {
-        envelope.addClass("close")
-           .removeClass("open");
+
+
+
+    var envelope2 = $('#envelope2');
+
+
+    envelope2.click( function() {
+        open2();
+    });
+
+
+    function open2() {
+        envelope2.addClass("open")
+           .removeClass("close");
     }
+
 
 });
