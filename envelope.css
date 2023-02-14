@@ -1,4 +1,4 @@
-#envelope {
+#envelope, #envelope2, #envelope3, #envelope4, #envelope5, #envelope6, #envelope7, #envelope8, #envelope9, #envelope10 {
     position: relative;
     width: 280px;
     height: 180px;
@@ -7,22 +7,7 @@
     margin-left: auto;
     margin-right: auto;
     top: 150px;
-    background-color: #00334c;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-}
-
-
-#envelope2 {
-    position: relative;
-    width: 280px;
-    height: 180px;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-    margin-left: auto;
-    margin-right: auto;
-    top: 150px;
-    background-color: #00334c;
+    background-color: #be0182;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
@@ -38,31 +23,30 @@
     border-right: 140px solid transparent;
     border-bottom: 82px solid transparent;
     /* a little smaller */
-    border-top: 98px solid #00334c;
+    border-top: 98px solid #ff63af;
     /* a little larger */
     transform-origin: top;
     pointer-events: none;
 }
 .pocket {
-    border-left: 140px solid #0077b2;
-    border-right: 140px solid #0077b2;
-    border-bottom: 90px solid #006da3;
+    border-left: 140px solid #f6e2bf;
+    border-right: 140px solid #928878;
+    border-bottom: 90px solid #dac9ab;
     border-top: 90px solid transparent;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
 }
 .letter {
     position: relative;
-    background-color: #fff;
-    width: 90%;
+    background-color: #ffffff00;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
     height: 90%;
     top: 5%;
-    border-radius: 6px;
-    box-shadow: 0 2px 26px rgba(0, 0, 0, 0.12);
+    padding: 0;
 }
-
 
 .letter:after {
     content: "";
@@ -71,51 +55,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0) 25%,
-        rgba(215, 227, 239, 0.7) 55%,
-        rgba(215, 227, 239, 1) 100%
-    );
-}
-
-.valentine1 {
-    position: relative;
-    background-image: url('valentines1.png');
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    height: 90%;
-    top: 5%;
-    border-radius: 6px;
-    box-shadow: 0 2px 26px rgba(0, 0, 0, 0.12);
-}
-
-.valentine1:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-image: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0) 25%,
-        rgba(215, 227, 239, 0.7) 55%,
-        rgba(215, 227, 239, 1) 100%
-    );
-}
-
-.close .valentine1 {
-    transform: translateY(0px);
-    transition: transform 0.4s ease, z-index 1s;
-    z-index: 1;
-
-}
-.open .valentine1 {
-    transform: translateY(-60px);
-    transition: transform 0.4s 0.6s ease, z-index 0.6s;
-    z-index: 2;
+    padding: 0;
+    margin: 0;
 }
 
 .words {
@@ -163,7 +104,7 @@
 
 }
 .open .letter {
-    transform: translateY(-60px);
+    transform: translateY(-150px);
     transition: transform 0.4s 0.6s ease, z-index 0.6s;
     z-index: 2;
 }
@@ -268,36 +209,8 @@
         margin-left: 50px;
     }
 }
-body {
-    background-color: #eeeff0;
-}
+
 .envlope-wrapper {
-    height: 380px;
-}
-.reset {
-    text-align: center;
-}
-.reset button {
-    font-weight: 800;
-    font-style: normal;
-    transition: all 0.1s linear;
-    -webkit-appearance: none;
-    background-color: transparent;
-    border: solid 2px #0077b2;
-    border-radius: 4px;
-    color: #0077b2;
-    display: inline-block;
-    font-size: 14px;
-    text-transform: uppercase;
-    margin: 5px;
-    padding: 10px;
-    line-height: 1em;
-    text-decoration: none;
-    min-width: 120px;
-    cursor: pointer;
-}
-.reset button:hover {
-    background-color: #0077b2;
-    color: #fff;
+    height: fit-content;
 }
 

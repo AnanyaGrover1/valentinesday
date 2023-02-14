@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+:root {
+    --val-width: 220px;
+    --val-height: 220px;
+}
+
+body {
+  background-color: #f2acac00;
+  font-family: 'Oleo Script Swash Caps', cursive;
+}
+
+input
+{
+  display: none;
+}
+
+.valentines-day-card {
+    font-family: Arial, Helvetica, sans-serif
+    position: relative;
+    width: var(--val-width);
+    height: var(--val-height);
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    margin: auto;
+    transition: .3s;
+    display: block;
+}
+
+.card-front {
+  position: relative;
+  background-color: #fff0f3;
+  width: var(--val-width);
+  height: var(--val-height);
+  transform-origin: left;
+  box-shadow: inset 100px 20px 100px rgba(0,0,0,.15);
+  transition: .3s;
+}
+
+.card-front:before {
+  content:"";
+  position: absolute;
+  width: calc(var(--val-width) - 20px);
+  height: calc(var(--val-height) - 20px);
+  background-color: #ff88b0;
+  top: 10px;
+  left: 10px;
+}
+
+.card-inside {
+  position: absolute;
+  background-color: #fff0f3;
+  width: var(--val-width);
+  height: var(--val-height);
+  z-index:-1;
+  left:0;
+  top:0;
+  box-shadow: inset 100px 20px 100px rgba(0,0,0,0.22), 100px 20px 100px rgba(0,0,0,0.1);
+}
+
+.open {
+  position: absolute;
+  width: var(--val-width);
+  height: var(--val-height);
+  left:0;
+  top:0;
+  background-color: transparent;
+  z-index:6;
+  cursor: pointer;
+}
+
+.card-inside .text-one{
+    font-family: 'Bad Script', cursive;
+    font-weight: 800;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 23px;
+    line-height: 35px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#ff3030;
+}
+
+#open:checked ~ .card-front, #open2:checked ~ .card-front, #open3:checked ~ .card-front, #open4:checked ~ .card-front {
+  transform: rotateY(-155deg);
+  background-color: #fff0f3;
+  box-shadow: inset 100px 20px 100px rgba(0,0,0,.13), 30px 0 50px rgba(0,0,0,0.1);
+}
+
+#open:checked ~ .card-front:before, #open2:checked ~ .card-front:before, #open3:checked ~ .card-front:before, #open4:checked ~ .card-front:before {
+  z-index:5;
+  background-color: #fff0f3;
+  width: var(--val-width);
+  height: var(--val-height);
+  top:0;
+  left:0;
+  box-shadow: inset 100px 20px 100px rgba(0,0,0,.1), 30px 0 50px rgba(0,0,0,0.1);
+}
+
+.note {
+  /* position: relative;
+  width: calc(var(--val-width) - 100px);
+  height: calc(var(--val-height) - 150px);
+  background-color: #fff0f3;
+  top:75px;
+  left:50px;
+  color: #333;
+  font-size:30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  filter: drop-shadow(0 0 20px rgba(0,0,0,0.3));  */
+  visibility: hidden;
+}
+
+.heart {
+  position: absolute;
+  content:"";
+  top: calc(var(--val-width) / 3.3);
+  left: calc(var(--val-height) / 3.3);
+  background-color: #ba1c1c;
+  width: calc(var(--val-width) - 260px);
+  height: calc(var(--val-height) - 260px);
+}
+
+.hear:before {
+  transform: rotate(-45deg);
+  top:-20px;
+  left:80px;
+}
+
+.hear:after {
+  border-radius:50%;
+  top:-35px;
+  left:65px;
+  box-shadow:30px 0 #ba1c1c;
+}
+
+
+@keyframes close {
+    0%, 100% {
+        transform: scale(1, .05);
+    }
+    5%, 95% {
+        transform: scale(1, 1);
+    }
+}
+
